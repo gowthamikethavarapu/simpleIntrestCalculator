@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>si calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <form>
+            <center><h1>Simple intrest calculator</h1></center>
+            <div class="mb-3 form-group row">
+            
+                <input type="text" placeholder="Enter Principal amount" class="col-sm-12 form-control" id="pamt">
+            </div>
+            <div class="mb-3 row">
+            
+                <input type="text" placeholder="rate of intrest(%)" class="col-sm-12 form-control" id="rate">
+            </div>
+            <div class="mb-3 row">
+          
+                <input type="text" placeholder="Enter Time period(years)" class="col-sm-6 form-control" id="time">
+                <input type="text" placeholder="Enter Time period(Month)"  class="col-sm-6 form-control month" id="tmonth">
+            </div>
+            
+            <div class="mb-3 row">
+                <button type="submit"  onclick="simpleInterest()" class="btn btn-primary col-sm-6 form-control">Submit</button>
+                <button type="reset" class="btn btn-warning col-sm-6 form-control">Reset</button>
+            </div>
+            <div class="mb-3 row">
+                <label class="col-sm-3">SIMPLE INTREST</label>
+                <input type="text" class="col-sm-9 form-control" id="si">
+               
+            </div>
+            <div class="mb-3 row">
+                <label class="col-sm-3">TOTAL AMOUNT</label>
+                <input type="text" class="col-sm-9 form-control" id="tamt">
+               
+            </div>
+            <div class="mb-3 row">
+                <label class="col-sm-3">SIMPLE INTREST(MONTHLY)</label>
+                <input type="text" class="col-sm-9 form-control" id="sim">
+               
+            </div>
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript">
+function simpleInterest()
+{
+var p,t,T,r,si,sim,total;
+p = document.getElementById ("pamt").value;
+T = document.getElementById ("time").value;
+t=document.getElementById ("tmonth").value;
+r = document.getElementById ("rate").value;
+si = parseInt((p*(T+(t/12))*r)/100 );
+sim=si/12;
+total=p+si;
+document.getElementById ('si').value =si;
+document.getElementById ('tamt').value =total;
+document.getElementById ('sim').value =sim;
+
+}
+</script>
+</html>

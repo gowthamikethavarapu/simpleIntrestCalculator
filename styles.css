@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-image: url(https://thumbs.dreamstime.com/b/nis-wooden-staircase-example-compound-interest-179323036.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color :white;
+}
+form{
+    background-color: rgb(52, 101, 109,0.9);
+    border-radius: 5px;
+    
+  }
+
+.main{
+    margin: 100px 12%;
+
+}
+form{
+    padding: 50px 17%;
+}
+input{
+    height:20px
+}
+
+h1{
+   margin: 0 auto 30px auto;
+}
+@media screen and (max-width:500px) {
+    button{
+        margin:10px 10px;
+    }
+    .month{
+        margin-top: 20px;
+    }
+    
+}
